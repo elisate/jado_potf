@@ -1,0 +1,81 @@
+/* Sidebar container */
+.sidebar {
+  width: 16rem;
+  background-color: #000000; /* Pure black */
+  color: #ffffff;
+  padding: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push logout to bottom */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Title/Logo */
+.title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Links */
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  color: #ffffff; /* Default text color white */
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.25s ease-in-out; /* Smooth transition */
+}
+
+/* Hover effect: Background turns white, text turns black */
+.navLink:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Active link */
+.active {
+  background-color: #333333;
+  color: #ffffff; /* Keep white when active */
+}
+
+/* Icon inside link */
+.navButtonIcon {
+  font-size: 1.2rem;
+  transition: color 0.25s ease-in-out;
+}
+
+/* On hover, icons turn black */
+.navLink:hover .navButtonIcon {
+  color: #000000;
+}
+
+/* Logout button */
+.logout {
+  color: #f87171;  /* Soft red for logout */
+  font-weight: bold;
+  transition: all 0.25s ease-in-out;
+}
+
+.logout:hover {
+  background-color: #ffffff;
+  color: #000000;  /* Turn black on hover */
+}

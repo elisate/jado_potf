@@ -1,0 +1,14 @@
+/* app/dashboard/dashboard.module.css */
+
+.container {
+  display: flex !important;
+  min-height: 100vh !important;
+  margin-left: 18rem !important; /* Matches sidebar width */
+  background-color: #ffffff !important;
+  font-family: 'Inter', sans-serif !important; /* Align with DashboardView */
+}
+
+.main {
+  flex: 1 !important;
+  padding: 0 !important; /* Remove padding to avoid duplication with DashboardView */
+}

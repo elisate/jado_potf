@@ -1,0 +1,156 @@
+.container {
+  background-color: #ffffff;
+  margin-left: 1rem;
+  max-width: 65em; /* Increased to fit additional columns */
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border: 1px solid #bfdbfe;
+  min-height: 70vh;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.controlButton {
+  margin-left: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+.input {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  flex-grow: 1;
+  max-width: 20rem;
+}
+
+.sortButton {
+  composes: controlButton;
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.sortButton:hover {
+  background-color: #1d4ed8;
+}
+
+.createButton {
+  composes: controlButton;
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.createButton:hover {
+  background-color: #059669;
+}
+
+.branchButton {
+  composes: controlButton;
+  padding: 0.5rem 1rem;
+}
+
+.branchButtonActive {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.branchButtonInactive {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.branchButtonInactive:hover {
+  background-color: #e5e7eb;
+}
+
+.tableContainer {
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHead {
+  background-color: #e5e7eb;
+}
+
+.tableHeadRow th {
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tableBody {
+  background-color: #f9fafb;
+}
+
+.tableRow td {
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+  color: #1f2937;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.status {
+  color: #16a34a;
+}
+
+.noAgents {
+  text-align: center;
+  color: #4b5563;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .input {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  .tableHeadRow th,
+  .tableRow td {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+  }
+}

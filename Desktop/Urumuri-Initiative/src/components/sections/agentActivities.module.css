@@ -1,0 +1,249 @@
+/* Root container */
+.container {
+  max-width: 50rem; /* Matches settings.module.css max-width */
+  margin: 0 auto;
+  padding: 2rem; /* Matches settings.module.css padding */
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* Matches settings.module.css gap */
+  text-align: left;
+  min-height: 100vh;
+  background-color: #ffffff; /* Pure white to match settings.module.css */
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif; /* Matches settings.module.css font stack */
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Adjusted to center for better balance */
+  padding: 1.5rem; /* Matches settings.module.css header padding */
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.header:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Matches settings.module.css hover */
+}
+
+.headerTitle {
+  font-size: 1.875rem; /* Matches settings.module.css header h1 */
+  font-weight: 700; /* Matches settings.module.css header weight */
+  color: #000000; /* Black to match settings.module.css */
+  margin: 0;
+}
+
+/* Input group */
+.inputGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Matches settings.module.css inputGroup gap */
+  align-items: center;
+}
+
+.input {
+  padding: 0.75rem 1rem; /* Matches settings.module.css input padding */
+  border: 2px solid #000000; /* Matches settings.module.css input border */
+  border-radius: 0.5rem;
+  font-size: 1rem; /* Matches settings.module.css input */
+  color: #000000;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #666666; /* Matches settings.module.css input focus */
+  box-shadow: 0 0 0 3px #e0e0e0; /* Matches settings.module.css focus ring */
+}
+
+.input::placeholder {
+  color: #666666; /* Matches settings.module.css description */
+}
+
+/* Button styles */
+.button {
+  padding: 0.75rem 1.5rem; /* Matches settings.module.css button */
+  border: 2px solid #000000; /* Thicker black border */
+  color: #000000;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500; /* Matches settings.module.css button weight */
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #f5f5f5; /* Matches settings.module.css button hover */
+  transform: translateY(-2px); /* Matches settings.module.css lift effect */
+}
+
+/* Activity feed */
+.activityFeed {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Matches settings.module.css section gap */
+}
+
+.activityItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.75rem; /* Matches settings.module.css card padding */
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Matches settings.module.css card */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.activityItem:hover {
+  transform: translateY(-3px); /* Matches settings.module.css card hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.agentImage {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid #000000; /* Matches settings.module.css input border */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.agentImage:hover {
+  transform: scale(1.05); /* Subtle zoom to match settings.module.css profileImage */
+}
+
+.activityDetails {
+  flex: 1;
+}
+
+.agentName {
+  font-size: 1rem;
+  font-weight: 600; /* Matches settings.module.css sectionTitle */
+  color: #000000;
+}
+
+.activityAction {
+  font-size: 0.9rem;
+  font-weight: 400; /* Lighter for body text */
+  color: #666666; /* Matches settings.module.css description */
+}
+
+.time {
+  font-size: 0.85rem;
+  font-weight: 300; /* Matches settings.module.css description */
+  color: #666666;
+  font-style: italic;
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modalContent {
+  background: #ffffff;
+  padding: 1.75rem; /* Matches settings.module.css card padding */
+  border-radius: 0.5rem;
+  width: 400px;
+  max-width: 95%;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Matches settings.module.css card */
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.modalContent:hover {
+  transform: translateY(-3px); /* Matches settings.module.css card hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modalTitle {
+  font-size: 1.25rem; /* Matches settings.module.css sectionTitle */
+  font-weight: 600; /* Matches settings.module.css sectionTitle */
+  color: #000000;
+  border-bottom: 2px solid #000000; /* Matches settings.module.css sectionTitle */
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.modalDetail {
+  font-size: 1rem;
+  font-weight: 400; /* Lighter for body text */
+  color: #000000;
+  margin: 0.5rem 0;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666666; /* Matches settings.module.css description */
+  transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+  color: #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    margin: 0 1rem;
+    padding: 1.5rem; /* Matches settings.module.css */
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 1.5rem; /* Matches settings.module.css */
+  }
+
+  .inputGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input, .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .headerTitle {
+    font-size: 1.5rem; /* Matches settings.module.css header h1 */
+  }
+
+  .activityItem {
+    padding: 1.25rem; /* Matches settings.module.css card */
+  }
+
+  .input, .button {
+    padding: 0.5rem 0.75rem; /* Matches settings.module.css input */
+    font-size: 0.9rem;
+  }
+
+  .agentImage {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .modalContent {
+    padding: 1.25rem; /* Matches settings.module.css card */
+  }
+}

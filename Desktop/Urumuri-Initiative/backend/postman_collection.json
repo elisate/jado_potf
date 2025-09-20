@@ -1,0 +1,320 @@
+{
+  "info": {
+    "name": "Urumuri Initiative API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Postman collection to test all loan and payment endpoints including salary payments",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Loan Routes",
+      "item": [
+        {
+          "name": "Request Loan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employeeId\": \"{{employeeId}}\",\n  \"loanAmount\": 1000,\n  \"purpose\": \"Personal\",\n  \"loanType\": \"salary_advance\",\n  \"requestedWeeks\": 4\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/loan/request",
+              "host": ["{{baseUrl}}"],
+              "path": ["loan", "request"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Approve Loan",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/loan/{{loanId}}/approve",
+              "host": ["{{baseUrl}}"],
+              "path": ["loan", "{{loanId}}", "approve"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"comments\": \"Approved by admin\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Activate Loan",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/loan/{{loanId}}/activate",
+              "host": ["{{baseUrl}}"],
+              "path": ["loan", "{{loanId}}", "activate"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Pending Loans",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/loan/pending",
+              "host": ["{{baseUrl}}"],
+              "path": ["loan", "pending"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Employee Loans",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/loan/employee/{{employeeId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["loan", "employee", "{{employeeId}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Active Loan",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/loan/employee/{{employeeId}}/active",
+              "host": ["{{baseUrl}}"],
+              "path": ["loan", "employee", "{{employeeId}}", "active"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payment Routes",
+      "item": [
+        {
+          "name": "Create Payment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"loanId\": \"{{loanId}}\",\n  \"paymentAmount\": 500,\n  \"paymentDate\": \"2024-01-01\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payment/create",
+              "host": ["{{baseUrl}}"],
+              "path": ["payment", "create"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Payments By Loan",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/payment/loan/{{loanId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["payment", "loan", "{{loanId}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Process Monthly Salary Payments",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/payment/process-monthly",
+              "host": ["{{baseUrl}}"],
+              "path": ["payment", "process-monthly"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Trigger Manual Salary Payment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/payment/trigger-manual",
+              "host": ["{{baseUrl}}"],
+              "path": ["payment", "trigger-manual"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Employee Salary Payments",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/payment/employee/{{employeeId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["payment", "employee", "{{employeeId}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Payment By Reference",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/payment/reference/{{reference}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["payment", "reference", "{{reference}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Payment By Salary Code",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/payment/salary-code/{{salaryCode}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["payment", "salary-code", "{{salaryCode}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "token",
+      "value": ""
+    },
+    {
+      "key": "employeeId",
+      "value": ""
+    },
+    {
+      "key": "loanId",
+      "value": ""
+    },
+    {
+      "key": "reference",
+      "value": ""
+    },
+    {
+      "key": "salaryCode",
+      "value": ""
+    }
+  ]
+}

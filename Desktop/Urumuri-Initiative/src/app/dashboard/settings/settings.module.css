@@ -1,0 +1,239 @@
+/* Import a modern font (Inter or Poppins) for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* Root container */
+.container {
+  max-width: 48rem; /* Slightly reduced for better focus */
+  margin: 0 auto; /* Centered */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Reduced gap for tighter layout */
+  text-align: left;
+  min-height: 100vh;
+  background-color: #f9fafb; /* Soft off-white for a modern feel */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Modern font stack */
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem; /* Softer corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.header:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 1.75rem; /* Slightly smaller for balance */
+  font-weight: 500; /* Lighter weight for elegance */
+  color: #1f2a44; /* Dark navy for a softer contrast */
+}
+
+/* Button group */
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Button styling */
+.button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #d1d5db; /* Light gray border */
+  color: #1f2a44; /* Dark navy text */
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 400; /* Lighter weight for buttons */
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background-color: #f3f4f6; /* Subtle gray hover */
+  border-color: #6b7280; /* Darker gray on hover */
+  transform: translateY(-1px);
+}
+
+/* Card container */
+.card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem; /* Softer corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px); /* Subtle lift */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Description text */
+.description {
+  color: #6b7280; /* Softer gray for better readability */
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+  font-size: 0.95rem; /* Slightly smaller for subtlety */
+  font-weight: 300; /* Lighter weight for descriptions */
+}
+
+/* Section styling */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Section title */
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 500; /* Lighter weight for headings */
+  color: #1f2a44; /* Dark navy */
+  border-bottom: 1px solid #e5e7eb; /* Light gray underline */
+  padding-bottom: 0.5rem;
+}
+
+/* Input group */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Labels */
+.label {
+  font-size: 0.85rem;
+  font-weight: 500; /* Medium weight for clarity */
+  color: #374151; /* Dark gray */
+  letter-spacing: 0.02em;
+}
+
+/* Input fields */
+.input {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  color: #1f2a44;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3b82f6; /* Blue focus ring */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Soft blue glow */
+}
+
+/* Select dropdown */
+.select {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  color: #1f2a44;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Checkbox group */
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Checkbox styling */
+.checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  appearance: none;
+  position: relative;
+}
+
+.checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.checkbox:checked {
+  background-color: #3b82f6; /* Blue when checked */
+  border-color: #3b82f6;
+}
+
+.checkbox:checked::after {
+  content: "✔";
+  color: #ffffff;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Feedback message */
+.message {
+  color: #10b981; /* Green for success messages */
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .buttonGroup {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .section {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .input, .select {
+    padding: 0.5rem;
+  }
+}

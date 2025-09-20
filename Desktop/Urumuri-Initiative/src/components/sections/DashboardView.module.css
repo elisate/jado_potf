@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #ffffff !important;
+  --bg-card: #ffffff !important;
+  --text-primary: #1a1a1a !important;
+  --text-secondary: #4b4b4b !important;
+  --text-muted: #6b7280 !important;
+  --graph-color: #1c2526 !important;
+  --border-color: #e0e0e0 !important;
+  --padding: 1.5rem !important;
+  --border-radius: 0.75rem !important;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  --spacing: 0.75rem !important;
+  --font-family: 'Inter', sans-serif !important;
+}
+
+.container {
+  padding: var(--padding) !important;
+  background-color: var(--bg-primary) !important;
+  min-height: 100vh !important;
+  margin-left: -2rem !important;
+  font-family: var(--font-family) !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin-left: 0 !important;
+    padding: 1rem !important;
+  }
+}
+
+.header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 2rem !important;
+  padding: var(--padding) !important;
+  background-color: var(--bg-card) !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--shadow) !important;
+  flex-wrap: wrap !important;
+  gap: 1rem !important;
+}
+
+.welcome {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  margin: 0 !important;
+}
+
+.subtitle {
+  font-size: 0.875rem !important;
+  color: var(--text-muted) !important;
+  margin: 0.25rem 0 0 !important;
+}
+
+.headerActions {
+  display: flex !important;
+  align-items: center !important;
+  gap: var(--spacing) !important;
+  flex-wrap: wrap !important;
+}
+
+.searchInput {
+  padding: 0.5rem 1rem !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--border-radius) !important;
+  color: var(--text-primary) !important;
+  outline: none !important;
+  font-size: 0.875rem !important;
+  width: 100% !important;
+  max-width: 200px !important;
+}
+
+.searchInput:focus {
+  border-color: var(--graph-color) !important;
+  box-shadow: 0 0 0 2px rgba(28, 37, 38, 0.1) !important;
+}
+
+.profile {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.profileImg {
+  width: 2rem !important;
+  height: 2rem !important;
+  border-radius: 50% !important;
+  border: 1px solid var(--border-color) !important;
+  object-fit: cover !important;
+}
+
+.profileName {
+  color: var(--text-primary) !important;
+  font-weight: 500 !important;
+  font-size: 0.875rem !important;
+}
+
+.statsGrid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  gap: 1.5rem !important;
+  margin-bottom: 2.5rem !important;
+}
+
+.statCard {
+  background-color: var(--bg-card) !important;
+  padding: var(--padding) !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--shadow) !important;
+  display: flex !important;
+  align-items: center !important;
+  transition: transform 0.2s ease !important;
+}
+
+.statCard:hover {
+  transform: translateY(-4px) !important;
+}
+
+.statIcon {
+  font-size: 1.5rem !important;
+  margin-right: 1rem !important;
+  color: var(--graph-color) !important;
+  flex-shrink: 0 !important;
+}
+
+.statLabel {
+  color: var(--text-secondary) !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+}
+
+.statValue {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  margin: 0.25rem 0 0 !important;
+}
+
+.statChangePositive {
+  color: #2ecc71 !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  margin: 0.25rem 0 0 !important;
+}
+
+.statChangeNegative {
+  color: #e74c3c !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  margin: 0.25rem 0 0 !important;
+}
+
+.chartsContainer {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr !important;
+  gap: 1.5rem !important;
+}
+
+@media (max-width: 768px) {
+  .chartsContainer {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.chartCard {
+  background-color: var(--bg-card) !important;
+  padding: var(--padding) !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.chartHeader {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 1rem !important;
+}
+
+.chartTitle {
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  margin: 0 !important;
+}
+
+.exportButton {
+  padding: 0.25rem 0.75rem !important;
+  background-color: var(--graph-color) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: var(--border-radius) !important;
+  cursor: pointer !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.exportButton:hover {
+  background-color: #141b1d !important;
+}
+
+.chartWrapper {
+  position: relative !important;
+  width: 100% !important;
+  height: 200px !important;
+}
+
+.chartPeriod {
+  font-size: 0.75rem !important;
+  color: var(--text-muted) !important;
+  text-align: right !important;
+  margin-top: 0.5rem !important;
+}
+
+.categoryChart {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+.categoryItem {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  flex-wrap: wrap !important;
+}
+
+.categoryProgress {
+  width: 100% !important;
+  height: 10px !important;
+  background-color: var(--border-color) !important;
+  border-radius: 5px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.categoryProgress::before {
+  content: '' !important;
+  position: absolute !important;
+  height: 100% !important;
+  background-color: var(--graph-color) !important;
+  border-radius: 5px !important;
+  width: var(--progress, 0%) !important;
+  transition: width 0.3s ease !important;
+}
+
+.categoryValue {
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  color: var(--text-primary) !important;
+  min-width: 4rem !important;
+  text-align: right !important;
+}
+
+.categoryName {
+  font-size: 0.875rem !important;
+  color: var(--text-secondary) !important;
+  margin: 0 !important;
+  flex: 1 !important;
+}
+

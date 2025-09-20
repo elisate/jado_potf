@@ -1,0 +1,287 @@
+/* --- container & shared --- */
+.container {
+  padding: 1rem !important;
+  background-color: #ffffff !important;
+  min-height: 100vh !important;
+  font-family: 'Inter', sans-serif !important;
+  box-sizing: border-box !important;
+  color: #000000 !important;
+ 
+  
+}
+
+.header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  margin-bottom: 1.5rem !important;
+  flex-wrap: wrap !important;
+  gap: 1rem !important;
+}
+
+.headerTitle {
+  font-size: 1.75rem !important;
+  font-weight: 600 !important;
+  color: #000000 !important;
+  margin: 0 !important;
+}
+
+.button {
+  padding: 0.5rem 1rem !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 0.25rem !important;
+  cursor: pointer !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.button:hover,
+.button.active {
+  background-color: #333333 !important;
+}
+
+.branchFilter {
+  display: flex !important;
+  gap: 0.5rem !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.cardsGrid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important; /* 3 cards per row */
+  gap: 2rem !important; /* Increased space between cards */
+  margin: 1rem -1rem !important;
+  max-width: 1200px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+
+.card {
+  background-color: #fff !important;
+  border: 1px solid #ddd !important;
+  border-radius: 0.5rem !important;
+  padding: 1rem !important;
+  cursor: pointer !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+.card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+.cardHeader {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  margin-bottom: 0.5rem !important;
+}
+.cardAvatar {
+  width: 3rem !important;
+  height: 3rem !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 1px solid #ccc !important;
+}
+.cardName {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #000 !important;
+}
+.cardCode {
+  font-size: 0.85rem !important;
+  color: #666 !important;
+}
+.cardMeta {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-top: 0.5rem !important;
+}
+.badge {
+  padding: 0.2rem 0.5rem !important;
+  font-size: 0.7rem !important;
+  background-color: #000 !important;
+  color: #fff !important;
+  border-radius: 0.25rem !important;
+}
+.activityAction {
+  font-size: 0.85rem !important;
+  color: #333 !important;
+}
+.time {
+  font-size: 0.75rem !important;
+  color: #999 !important;
+}
+
+/* --- pagination --- */
+.pagination {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 1.5rem 0 !important;
+  gap: 0.4rem !important;
+}
+
+.pageButton {
+  padding: 0.4rem 0.8rem !important;
+  border: 1px solid #ccc !important;
+  border-radius: 0.25rem !important;
+  background-color: white !important;
+  cursor: pointer !important;
+  font-size: 0.9rem !important;
+  transition: 0.2s !important;
+}
+
+.pageButton[disabled] {
+  opacity: 0.4 !important;
+  cursor: not-allowed !important;
+}
+
+.pageButton:hover:not([disabled]) {
+  background-color: #f0f0f0 !important;
+}
+
+.activePage {
+  background-color: black !important;
+  color: white !important;
+  border-color: black !important;
+}
+
+/* --- modal --- */
+.modalOverlay {
+  position: fixed !important;
+  inset: 0 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 1000 !important;
+}
+
+.modalContent {
+  background-color: #ffffff !important;
+  padding: 1.5rem !important;
+  border-radius: 0.5rem !important;
+  width: 850px !important;
+  max-width: 95% !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  position: relative !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.modalHeader {
+  display: flex !important;
+  gap: 1rem !important;
+  align-items: center !important;
+  margin-bottom: 1rem !important;
+}
+
+.modalAvatar {
+  width: 4rem !important;
+  height: 4rem !important;
+  border-radius: 9999px !important;
+  border: 1px solid #ccc !important;
+  object-fit: cover !important;
+}
+
+.modalTitle {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #000000 !important;
+  margin: 0 !important;
+}
+.modalCode,
+.modalBranch {
+  font-size: 0.9rem !important;
+  color: #666 !important;
+}
+
+.closeButton {
+  position: absolute !important;
+  top: 0.5rem !important;
+  right: 0.5rem !important;
+  background: none !important;
+  border: none !important;
+  font-size: 1.5rem !important;
+  cursor: pointer !important;
+  color: #666666 !important;
+}
+
+.section {
+  margin-top: 1.25rem !important;
+}
+.sectionTitle {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.activityList {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: grid !important;
+  gap: 0.25rem !important;
+}
+.activityItem {
+  display: flex !important;
+  justify-content: space-between !important;
+  border-bottom: 1px solid #eee !important;
+  padding: 0.4rem 0 !important;
+}
+
+.detailTable {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  font-size: 0.9rem !important;
+}
+.detailTable th,
+.detailTable td {
+  border: 1px solid #e5e5e5 !important;
+  padding: 0.4rem 0.6rem !important;
+  text-align: left !important;
+}
+.detailTable thead {
+  background: #fafafa !important;
+  font-weight: 600 !important;
+}
+
+.emptyState,
+.emptyRow {
+  text-align: center !important;
+  color: #777 !important;
+  padding: 1rem 0 !important;
+}
+.searchBar {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  margin: 0 0 1.5rem 0 !important;
+  max-width: 400px !important;
+}
+
+.searchIcon {
+  color: #666 !important;
+  font-size: 1rem !important;
+}
+
+.searchInput {
+  flex: 1 !important;
+  padding: 0.5rem 1rem !important;
+  border: 1px solid #ccc !important;
+  border-radius: 0.25rem !important;
+  font-size: 0.9rem !important;
+  color: #000 !important;
+  outline: none !important;
+}
+
+.searchInput:focus {
+  border-color: #000 !important;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1) !important;
+}
