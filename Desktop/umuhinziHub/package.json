@@ -1,0 +1,24 @@
+{
+  "name": "umuhinzihub",
+  "version": "1.0.0",
+  "description": "umuhinzi hub project",
+  "main": "server.ts",
+  "scripts": {
+    "dev":"nodemon src/server.ts",
+    "test": "npm run dev"
+  },
+  "author": "Team 4",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.7.2",
+    "@types/pg": "^8.15.5",
+    "express": "^5.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "pg": "^8.16.3"
+  }
+}
