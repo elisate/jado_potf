@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Portfolio Design System */
+    --background: 32 8% 12%;
+    --foreground: 0 0% 100%;
+
+    --card: 32 8% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 32 8% 12%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 37 94% 52%;
+    --primary-foreground: 32 8% 12%;
+
+    --secondary: 32 8% 18%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 32 8% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 37 94% 52%;
+    --accent-foreground: 32 8% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 100% / 0.15;
+    --input: 32 8% 8%;
+    --ring: 37 94% 52%;
+
+    --radius: 0.5rem;
+
+    /* Custom portfolio colors */
+    --portfolio-bg: 32 8% 12%;
+    --portfolio-card: 32 8% 18%;
+    --portfolio-accent: 37 94% 52%;
+    --portfolio-text: 0 0% 100%;
+    --portfolio-text-muted: 0 0% 65%;
+    --portfolio-border: 0 0% 100% / 0.15;
+
+    --sidebar-background: 32 8% 8%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 37 94% 52%;
+    --sidebar-primary-foreground: 32 8% 12%;
+    --sidebar-accent: 32 8% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100% / 0.15;
+    --sidebar-ring: 37 94% 52%;
+  }
+
+  .dark {
+    --background: 32 8% 12%;
+    --foreground: 0 0% 100%;
+    --card: 32 8% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 32 8% 12%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 37 94% 52%;
+    --primary-foreground: 32 8% 12%;
+    --secondary: 32 8% 18%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 32 8% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 37 94% 52%;
+    --accent-foreground: 32 8% 12%;
+    --destructive: 0 62% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 100% / 0.15;
+    --input: 32 8% 8%;
+    --ring: 37 94% 52%;
+    --sidebar-background: 32 8% 8%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 37 94% 52%;
+    --sidebar-primary-foreground: 32 8% 12%;
+    --sidebar-accent: 32 8% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100% / 0.15;
+    --sidebar-ring: 37 94% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Add to your existing index.css */
+@layer utilities {
+  /* Better touch targets for mobile */
+  .min-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent horizontal overflow */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Improve mobile scrolling */
+@media (max-width: 768px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+}
