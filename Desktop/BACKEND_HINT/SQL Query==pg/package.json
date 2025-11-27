@@ -1,0 +1,27 @@
+{
+  "name": "coder",
+  "version": "1.0.0",
+  "description": "The study Project",
+  "main": "server.ts",
+  "scripts": {
+    "test": "npm run dev",
+    "dev": "nodemon src/server.ts"
+  },
+  "author": "Elisa",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.6.2",
+    "@types/pg": "^8.15.5",
+    "express": "^5.1.0",
+    "prisma": "^6.17.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.17.1",
+    "dotenv": "^17.2.3",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.3"
+  }
+}
