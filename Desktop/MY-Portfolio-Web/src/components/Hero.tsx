@@ -33,12 +33,12 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="order-1 lg:order-2 animate-scale-in">
-          <div className="relative">
+        <div className="order-1 lg:order-2 animate-scale-in pt-20">
+          <div className="relative pt-10">
             <img
               src={image}
               alt="JEAN DE DIEU DUSHIMIYIMANA Profile"
-              className="mx-auto w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[550px] h-auto -mt-8 sm:-mt-12 lg:-mt-40"
+              className="mx-auto w-full max-w-[250px] sm:max-w-[300px] lg:max-w-[500px] h-auto -mt-8 sm:-mt-12 lg:-mt-40"
             />
           </div>
         </div>
